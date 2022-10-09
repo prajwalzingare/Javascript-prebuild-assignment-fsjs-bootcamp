@@ -64,7 +64,7 @@ listOfFaq.forEach((f) => {
   f.addEventListener("click", () => {
     const answer = f.parentElement.parentElement.lastChild;
     //if we add remove then it will not toggle it will stay as it is
-    answer.classList.remove("hidden");
-    // answer.classList.toggle("hidden");
+    // answer.classList.remove("hidden");
+    answer.classList.toggle("hidden");
   });
 });
