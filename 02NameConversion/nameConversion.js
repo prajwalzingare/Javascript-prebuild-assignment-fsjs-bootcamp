@@ -39,6 +39,54 @@ const convertPascalCase = (text) => {
   return arrayFunction.join("");
 };
 
+//function for snake_case
+
+const convertSnakeCase = (text) => {
+  const words = text.split(" ");
+  const arrayFunction = words.map((word, i) => {
+    const firstLetter = word.slice(0, 1);
+    const remainingLetter = word.slice(1);
+    return firstLetter.toLowerCase() + remainingLetter;
+  });
+
+  return arrayFunction.join("_");
+};
+
+// function for Screaming Snake Case:
+
+const convertScreamingSnakeCase = (text) => {
+  const words = text.split(" ");
+  const arrayFunction = words.map((word, i, arr) => {
+    // const allLetter = word.slice(0);
+    // return allLetter.toUpperCase();
+    return word.toUpperCase();
+  });
+  return arrayFunction.join("_");
+};
+
+//function for Kebab Case
+const convertKebabCase = (text) => {
+  const words = text.split(" ");
+  const arrayFunction = words.map((word, i, arr) => {
+    const firstLetter = word.slice(0, 1);
+    const remainingLetter = word.slice(1);
+    return firstLetter.toLowerCase() + remainingLetter;
+  });
+
+  return arrayFunction.join("-");
+};
+
+//function for Screaming  Kebab Case
+const convertScreamingKebabCase = (text) => {
+  const words = text.split(" ");
+  const arrayFunction = words.map((word, i, arr) => {
+    return word.toUpperCase();
+  });
+
+  return arrayFunction.join("-");
+};
+
+//EventListner function
 convert.addEventListener("click", () => {
   let text = input.value;
   console.log("first");
@@ -49,4 +97,19 @@ convert.addEventListener("click", () => {
   //to PascalCase
   const PascalCase = convertPascalCase(text);
   pascalCaseElement.innerText = PascalCase;
+  //to SnakeCase
+  const SnakeCase = convertSnakeCase(text);
+  snakeCaseElement.innerText = SnakeCase;
+
+  //to Screaming Snake Case
+  const screamingSnakeCase = convertScreamingSnakeCase(text);
+  screamingSnakeCaseElement.innerText = screamingSnakeCase;
+
+  //to kebabCase
+  const kebabCase = convertKebabCase(text);
+  kebabCaseElement.innerText = kebabCase;
+
+  // to Screaming Kebab Case
+  const ScreamingkebabCase = convertScreamingKebabCase(text);
+  screamingKebabCaseElement.innerText = ScreamingkebabCase;
 });
