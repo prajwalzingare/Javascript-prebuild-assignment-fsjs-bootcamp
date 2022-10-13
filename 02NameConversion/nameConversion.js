@@ -1,6 +1,9 @@
+// input and button element
+
 const input = document.querySelector("#text");
 const convert = document.querySelector("#convert-btn");
 
+//All elements
 const camelCaseElement = document.querySelector("#camel-case");
 const pascalCaseElement = document.querySelector("#pascal-case");
 const snakeCaseElement = document.querySelector("#snake-case");
@@ -40,7 +43,6 @@ const convertPascalCase = (text) => {
 };
 
 //function for snake_case
-
 const convertSnakeCase = (text) => {
   const words = text.split(" ");
   const arrayFunction = words.map((word, i) => {
@@ -53,7 +55,6 @@ const convertSnakeCase = (text) => {
 };
 
 // function for Screaming Snake Case:
-
 const convertScreamingSnakeCase = (text) => {
   const words = text.split(" ");
   const arrayFunction = words.map((word, i, arr) => {
@@ -86,7 +87,7 @@ const convertScreamingKebabCase = (text) => {
   return arrayFunction.join("-");
 };
 
-//EventListner function
+//EventListner function.We can add iput function also chnages will apear as you type.
 convert.addEventListener("click", () => {
   let text = input.value;
   console.log("first");
