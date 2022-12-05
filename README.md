@@ -1,4 +1,4 @@
-# FSJS-codsandbox-practice-assignment-js
+# Javascript prebuild assignment-fsjs-bootcamp
 We have to write js logic for project
 html and css files are given
 out of 16 project 7 we have to complete
